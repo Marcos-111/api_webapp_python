@@ -173,35 +173,6 @@ def registro():
             return Response(status=200)
         except:
             return jsonify({'trace': traceback.format_exc()})
-
-
-def html_table(data):
-
-    # Tabla HTML, header y formato
-    result = '<table border="1">'
-    result += '<thead cellpadding="1.0" cellspacing="1.0">'
-    result += '<tr>'
-    result += '<th>Nombre</th>'
-    result += '<th>Edad</th>'
-    result += '<th>Nacionalidad</th>'
-    result += '</tr>'
-
-    for row in data:
-        # Fila de una tabla HTML
-        result += '<tr>'
-        result += '<td>' + str(row[0]) + '</td>'
-        result += '<td>' + int(row[1]) + '</td>'
-        result += '<td>' + str(row[2]) + '</td>'
-        result += '</tr>'
-
-    # Fin de la tabla HTML
-    result += '</thead cellpadding="0" cellspacing="0" >'
-    result += '</table>'
-
-    return result
-
-
-
     
 
 if __name__ == '__main__':
