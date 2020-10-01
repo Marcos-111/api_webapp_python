@@ -87,3 +87,17 @@ def report(limit=0, offset=0):
     # Cerrar la conexión con la base de datos
     conn.close()
     return query_results
+
+
+def nationality_review(lista):
+    
+    dicc = {}
+        
+        
+    for x in lista:
+        s = lista.count(x)
+        dicc[x] = s
+
+    
+
+    return dicc
